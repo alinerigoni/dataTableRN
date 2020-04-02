@@ -4,17 +4,6 @@
 https://callstack.github.io/react-native-paper/data-table.html
 
 
-### Adicione a linha abaixo nos imports da página que deseja usar o componente.
-
-```
-import { CPTable } from '../../components/CPTable';
-```
-
-### Dentro do return adicione a tag do componente.
-```
-<CPTable rows={rows} titles={titles} showResult={true} deleteItem={true} />
-```
-
 ### Parâmetros obrigatórios são:
 
 #### titles
@@ -37,3 +26,13 @@ Deve passar true ou falso (boolean) para informar se deverá ser exibido na tabe
 
 Deve passar true ou false (boolean) para habilitar ou não a opção de deletar o item. Se passar true a opção de deletar o item fica disponível permitindo que quando o usuário clicar no item da tabela apareça um poup-up perguntando se deseja deletar aquele item da tabela.
 
+### Importe o componente na página
+
+```
+import { CPTable } from '../../components/CPTable';
+```
+
+### Adicione o componente dentro do return da página
+```
+<CPTable rows={rows} titles={titles} showResult={true} deleteItem={true} />
+```
