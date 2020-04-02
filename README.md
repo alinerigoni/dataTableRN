@@ -6,12 +6,13 @@ https://callstack.github.io/react-native-paper/data-table.html
 
 ### Adicione a linha abaixo nos imports da página que deseja usar o componente.
 
+```
 import { CPTable } from '../../components/CPTable';
+```
 
 ### Dentro do return adicione a tag do componente.
 ```
 <CPTable rows={rows} titles={titles} showResult={true} deleteItem={true} />
-
 ```
 
 ### Parâmetros obrigatórios são:
@@ -19,7 +20,7 @@ import { CPTable } from '../../components/CPTable';
 #### titles
 > const titles = ['titulo01', 'titulo02', 'titulo03', 'titulo04'];
 
-#### rows  - (A lógica está preparada para inserir apenas os valores de cada chave do objeto) 
+#### rows 
 > const rows = [{ 
 >        id: 1, 
 >        product: 'Painel Modular 14x12 extremme 01', 
