@@ -36,3 +36,5 @@ import { CPTable } from '../../components/CPTable';
 ```
 <CPTable rows={rows} titles={titles} showResult={true} deleteItem={true} />
 ```
+
+![Captura de Tela 2020-04-03 às 17 53 09](https://user-images.githubusercontent.com/31771420/78404222-4b982480-75d4-11ea-9a6d-d9f00c020808.png)
