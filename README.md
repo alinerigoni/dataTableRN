@@ -29,7 +29,7 @@ Deve passar true ou false (boolean) para habilitar ou não a opção de deletar 
 ### Importe o componente na página
 
 ```
-import { CPTable } from '../../components/CPTable';
+import CPTable from '../components/CPTable';
 ```
 
 ### Adicione o componente dentro do return da página

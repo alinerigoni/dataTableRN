@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import { DataTable } from 'react-native-paper';
 import { StyleSheet, Alert } from 'react-native';
 
-export default function CPTable({ rows, titles, showResult, deleteItem }) {
-    const [stateRows, updateRows] = useState(rows);
-    const [stateTitles, updateTitle] = useState(titles);
-    const [stateTotal, updateTotal] = useState(0);
+const CPTable = ({ rows, titles, showResult, deleteItem }) => {
+    const [ stateRows, updateRows ] = useState(rows);
+    const [ stateTitles, updateTitle ] = useState(titles);
+    const [ stateTotal, updateTotal ] = useState(0);
 
     let tableTitle = [];
     let tableRows = [];
 
-    function calcTotal() {
+    const calcTotal = () => {
         let result = 0;
 
         for (var i in stateRows) {
@@ -21,7 +21,7 @@ export default function CPTable({ rows, titles, showResult, deleteItem }) {
         return result;
     }
 
-    function actionDeleteItem(i) {
+    const actionDeleteItem = (i) => {
         Alert.alert(
             'Atenção',
             'Deseja deletar este item do orçamento',
@@ -39,7 +39,7 @@ export default function CPTable({ rows, titles, showResult, deleteItem }) {
         )
     }
 
-    function mountTitleTable() {
+    const mountTitleTable = () => {
         for (var i in stateTitles) {
             const currentItem = stateTitles[i];
             tableTitle.push(
@@ -48,7 +48,7 @@ export default function CPTable({ rows, titles, showResult, deleteItem }) {
         }
     }
 
-    function mountRowTable() {
+    const mountRowTable = () => {
         for (var i in stateRows) {
             const currentIndex = i;
             const rows = Object.values(stateRows[i]);
@@ -69,7 +69,7 @@ export default function CPTable({ rows, titles, showResult, deleteItem }) {
         }
     }
 
-    const init = function () {
+    const init = () => {
         mountTitleTable();
         mountRowTable();
     }
@@ -85,9 +85,9 @@ export default function CPTable({ rows, titles, showResult, deleteItem }) {
     return (
         <DataTable style={styles.table}>
             <DataTable.Header style={styles.header}>
-                {tableTitle}
+                { tableTitle }
             </DataTable.Header>
-            {tableRows}
+            { tableRows }
             {
                 showResult ? (
                     <DataTable.Row style={styles.showResult}>
@@ -129,3 +129,6 @@ const styles = StyleSheet.create({
         marginTop: 40,
     },
 });
+
+
+export default CPTable;

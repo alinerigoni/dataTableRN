@@ -1,9 +1,9 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import { CPTable } from '../../components/CPTable';
+import CPTable from '../components/CPTable';
 
 
-export default function PGTable (){
+const PGTable = () => {
     const titles = ['ID', 'Produto', 'QTD', 'Valor'];
     const rows = [
         { id: 1, product: 'Painel Modular 14x12 extremme 01', qtd: 1, price: "340,00" },
@@ -20,3 +20,5 @@ export default function PGTable (){
         </ScrollView>
     );
 };
+
+export default PGTable;
